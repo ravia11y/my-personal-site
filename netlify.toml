@@ -7,6 +7,18 @@
   status = 200
 
 [[redirects]]
+  from = "http://ravivenkata.com/*"
+  to = "https://ravivenkata.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.ravivenkata.com/*"
+  to = "https://ravivenkata.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://www.ravivenkata.com/*"
   to = "https://ravivenkata.com/:splat"
   status = 301
@@ -19,4 +31,5 @@
     X-XSS-Protection = "1; mode=block"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;" 
+    Content-Security-Policy = "default-src 'self' https: 'unsafe-inline' 'unsafe-eval'; img-src 'self' https: data:;"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload" 

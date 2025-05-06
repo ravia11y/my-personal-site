@@ -10,19 +10,11 @@
   from = "http://ravivenkata.com/*"
   to = "https://ravivenkata.com/:splat"
   status = 301
-  force = true
-
-[[redirects]]
-  from = "http://www.ravivenkata.com/*"
-  to = "https://ravivenkata.com/:splat"
-  status = 301
-  force = true
 
 [[redirects]]
   from = "https://www.ravivenkata.com/*"
   to = "https://ravivenkata.com/:splat"
   status = 301
-  force = true
 
 [headers]
   for = "/*"

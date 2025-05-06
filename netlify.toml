@@ -6,6 +6,12 @@
   to = "/index.html"
   status = 200
 
+[[redirects]]
+  from = "https://www.ravivenkata.com/*"
+  to = "https://ravivenkata.com/:splat"
+  status = 301
+  force = true
+
 [headers]
   for = "/*"
     [headers.values]

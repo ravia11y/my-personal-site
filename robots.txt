@@ -1,0 +1,23 @@
+# robots.txt for ravivenkata.com
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://ravivenkata.com/sitemap.xml
+
+# Optimize crawl rate
+Crawl-delay: 10
+
+# Prevent crawling of any potential future admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /draft/
+
+# Allow crawling of all assets
+Allow: /assets/
+Allow: /images/
+Allow: /css/
+Allow: /js/ 

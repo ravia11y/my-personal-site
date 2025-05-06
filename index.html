@@ -25,7 +25,7 @@
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
     
-    <title>Ravi Venkata - Professional Portfolio</title>
+    <title>Ravi Venkata | Accessibility Advocate & Problem Solver | AWS Program Manager</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -34,14 +34,30 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header role="banner">
         <nav aria-label="Main navigation" role="navigation">
-            <ul role="menubar">
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Toggle menu">
+                <span class="hamburger" aria-hidden="true"></span>
+            </button>
+            <ul id="main-menu" role="menubar" class="nav-menu">
                 <li role="none"><a href="#about" role="menuitem" tabindex="0">About</a></li>
                 <li role="none"><a href="#skills" role="menuitem" tabindex="0">Skills</a></li>
                 <li role="none"><a href="#experience" role="menuitem" tabindex="0">Experience</a></li>
                 <li role="none"><a href="#education" role="menuitem" tabindex="0">Education</a></li>
                 <li role="none"><a href="#awards" role="menuitem" tabindex="0">Awards</a></li>
                 <li role="none"><a href="#certifications" role="menuitem" tabindex="0">Certifications</a></li>
-                <li role="none"><a href="#contact" role="menuitem" tabindex="0">Contact</a></li>
+                <li class="contact-icons" role="none">
+                    <a href="mailto:ravi.nandurivenkata@gmail.com" class="contact-icon" aria-label="Send me an email at ravi.nandurivenkata@gmail.com">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <span class="sr-only">Email: ravi.nandurivenkata@gmail.com</span>
+                    </a>
+                    <a href="https://maps.google.com/?q=Herndon,VA" target="_blank" rel="noopener noreferrer" class="contact-icon" aria-label="View my location in Herndon, Virginia">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <span class="sr-only">Location: Herndon, Virginia</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ravi-venkata/" target="_blank" rel="noopener noreferrer" class="contact-icon" aria-label="Connect with me on LinkedIn">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <span class="sr-only">LinkedIn Profile</span>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -55,8 +71,8 @@
                     </div>
                     <div class="profile-info">  
                         <h1 id="about-heading">Ravi Venkata</h1>
-                        <h2>Program Manager - Accessibility</h2>
-                        <p class="bio">Program Manager with 14+ years of experience in IT and consulting. Skilled in project management, team leadership, and client engagement. Passionate about delivering high-quality results and driving business growth.</p>
+                        <h2>Customer-centric solution builder | Accessibility Advocate</h2>
+                        <p class="bio">Enterprise transformation strategist who translates complex regulatory requirements into billion-dollar value creation while orchestrating cross-functional alignment for breakthrough technology initiatives. I architect governance frameworks that streamline organizational complexity and accelerate AI-powered innovation—delivering what others consider impossible through collaborative leadership that turns compliance challenges into market advantages.</p>
                     </div>
                 </div>
             </div>
@@ -87,7 +103,7 @@
                             <li role="listitem">AWS Cloud & AI Implementation</li>
                             <li role="listitem">Inclusive Design Principles</li>
                             <li role="listitem">Quality Assurance & Testing</li>
-                            <li role="listitem">Metrics & KPI Analysis</li>
+                            <li role="listitem">OKR & KPI Management</li>
                         </ul>
                     </div>
                     <div class="skill-category" role="listitem">
@@ -96,7 +112,7 @@
                             <li role="listitem">Project Management: JIRA, Asana, Smartsheet</li>
                             <li role="listitem">Quality Assurance: HP ALM</li>
                             <li role="listitem">Design: Figma, InVision, Lucid</li>
-                            <li role="listitem">Analytics: Amazon QuickSight, Power BI</li>
+                            <li role="listitem">Analytics: Amazon QuickSight, Google Analytics</li>
                             <li role="listitem">Productivity: Microsoft Office, Google Suite</li>
                         </ul>
                     </div>
@@ -106,9 +122,10 @@
 
         <section id="experience" class="section" aria-labelledby="experience-heading">
             <div class="container">
-                <h2 id="experience-heading">Professional Experience</h2>
+                <h2 id="experience-heading">Work Experience</h2>
                 <div class="timeline">
                     <article class="timeline-item">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="company-header">
                                 <img src="assets/companies/aws-logo.png" alt="Amazon Web Services (AWS) company logo" class="company-logo">
@@ -118,16 +135,10 @@
                                     <p class="date">October 2022 - Present</p>
                                 </div>
                             </div>
-                            <ul role="list">
-                                <li role="listitem">Owned program strategy for delivering 200+ Accessibility Conformance Reports for AWS products, successfully fulfilling a billion-dollar federal customer's ADA/Section 508 compliance directive.</li>
-                                <li role="listitem">Built relationships across engineering, product, design, and legal teams to implement program mechanisms that enabled cross-functional collaboration.</li>
-                                <li role="listitem">Drove strategy for generative AI initiatives by leading stakeholder alignment and execution efforts, resulting in successful launches for Amazon Q, Chatbot, and Unified Search.</li>
-                                <li role="listitem">Managed complexity by establishing a unified governance framework across customer-critical quality domains.</li>
-                                <li role="listitem">Improved workflows by identifying process inefficiencies and implementing scalable solutions that improved cross-team alignment.</li>
-                            </ul>
                         </div>
                     </article>
                     <article class="timeline-item">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="company-header">
                                 <img src="assets/companies/disney-logo.png" alt="The Walt Disney Company logo" class="company-logo">
@@ -137,16 +148,10 @@
                                     <p class="date">September 2020 - September 2022</p>
                                 </div>
                             </div>
-                            <ul role="list">
-                                <li role="listitem">Acted as the owner by launching and leading the accessibility program, shifting the organization from a reactive to a proactive approach.</li>
-                                <li role="listitem">Built relationships with product, design, and engineering teams to break silos, and coordinate accessibility efforts across the organization.</li>
-                                <li role="listitem">Measured success through KPIs that demonstrated a 40% year-over-year reduction in accessibility defects.</li>
-                                <li role="listitem">Managed timelines for multiple concurrent accessibility initiatives, while prioritizing critical features for compliance deadlines.</li>
-                                <li role="listitem">Drove strategy by developing and implementing inclusive design systems that improved product quality and user experience.</li>
-                            </ul>
                         </div>
                     </article>
                     <article class="timeline-item">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="company-header">
                                 <img src="assets/companies/disney-logo.png" alt="The Walt Disney Company logo" class="company-logo">
@@ -156,16 +161,10 @@
                                     <p class="date">March 2012 - August 2020</p>
                                 </div>
                             </div>
-                            <ul role="list">
-                                <li role="listitem">Owned complexity by spearheading accessibility audits across Disney Experiences' digital portfolio.</li>
-                                <li role="listitem">Built relationships with the product, design, development, legal, and QA teams to ensure inclusive digital experiences.</li>
-                                <li role="listitem">Drove strategy by partnering with design teams to create accessibility design systems that streamlined the adoption of best practices.</li>
-                                <li role="listitem">Managed timelines for multiple concurrent accessibility projects, and testing cycles.</li>
-                                <li role="listitem">Improved workflows by developing standardized processes for accessibility testing and validation.</li>
-                            </ul>
                         </div>
                     </article>
                     <article class="timeline-item">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="company-header">
                                 <img src="assets/companies/data-solutions-logo.png" alt="Data Solutions, Inc. company logo" class="company-logo">
@@ -175,14 +174,10 @@
                                     <p class="date">August 2011 - February 2012</p>
                                 </div>
                             </div>
-                            <ul role="list">
-                                <li role="listitem">Developed a centralized test case repository with an integrated metrics dashboard for actionable insights.</li>
-                                <li role="listitem">Utilized data to identify test coverage gaps and communicate solutions to key stakeholders.</li>
-                                <li role="listitem">Managed timelines for testing cycles to ensure on-time delivery of client deliverables.</li>
-                            </ul>
                         </div>
                     </article>
                     <article class="timeline-item">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="company-header">
                                 <img src="assets/companies/wipro-logo.png" alt="Wipro company logo" class="company-logo">
@@ -192,13 +187,10 @@
                                     <p class="date">May 2008 - July 2009</p>
                                 </div>
                             </div>
-                            <ul role="list">
-                                <li role="listitem">Translated business requirements into comprehensive test frameworks, creating a Requirements Traceability Matrix to ensure complete verification coverage.</li>
-                                <li role="listitem">Engineered executive test summary reporting, delivering strategic metrics analysis, while maintaining enterprise-level documentation standards.</li>
-                            </ul>
                         </div>
                     </article>
                     <article class="timeline-item">
+                        <div class="timeline-marker"></div>
                         <div class="timeline-content">
                             <div class="company-header">
                                 <img src="assets/companies/airtel-logo.png" alt="Airtel Telecom company logo" class="company-logo">
@@ -208,12 +200,6 @@
                                     <p class="date">April 2006 - May 2006</p>
                                 </div>
                             </div>
-                            <ul role="list">
-                                <li role="listitem">Conducted comprehensive analysis of network signal strength data to identify coverage gaps and inconsistencies.</li>
-                                <li role="listitem">Collaborated with senior engineers to design cost-effective optimization strategies for coverage issues.</li>
-                                <li role="listitem">Presented technical findings and recommended improvements to management, highlighting service quality enhancements.</li>
-                                <li role="listitem">Developed expertise in telecom infrastructure analysis and methodologies for effective network optimization.</li>
-                            </ul>
                         </div>
                     </article>
                 </div>
@@ -228,7 +214,7 @@
                         <div class="timeline-content">
                             <h3>Master's Degree in Computer Software Engineering</h3>
                             <h4>Stratford University - Falls Church, VA</h4>
-                            <p class="date">2010 - May 2011</p>
+                            <p class="date">May 2011</p>
                             <p>Focus on Software Engineering and Technology Management</p>
                         </div>
                     </article>
@@ -236,7 +222,7 @@
                         <div class="timeline-content">
                             <h3>Bachelor's Degree in Electronics and Communications Engineering</h3>
                             <h4>J.N.T. University - Hyderabad, India</h4>
-                            <p class="date">2004 - May 2008</p>
+                            <p class="date">May 2008</p>
                             <p>Specialization in Electronics and Communications</p>
                         </div>
                     </article>
@@ -277,26 +263,6 @@
                             <p>Foundational certification in AWS cloud concepts, services, security, architecture, pricing, and support</p>
                         </div>
                     </article>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section" aria-labelledby="contact-heading">
-            <div class="container">
-                <h2 id="contact-heading">Contact Information</h2>
-                <div class="contact-info">
-                    <a href="mailto:raviteja2006@gmail.com" aria-label="Email me at raviteja2006@gmail.com" tabindex="0">
-                        <i class="fas fa-envelope" aria-hidden="true"></i> raviteja2006@gmail.com
-                    </a>
-                    <a href="tel:+17035076112" aria-label="Call me at (703) 507-6112" tabindex="0">
-                        <i class="fas fa-phone" aria-hidden="true"></i> (703) 507-6112
-                    </a>
-                    <a href="#" aria-label="Location" tabindex="0">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Herndon, VA
-                    </a>
-                    <a href="https://www.linkedin.com/in/ravi-venkata/" target="_blank" rel="noopener noreferrer" aria-label="Visit my LinkedIn profile" tabindex="0">
-                        <i class="fab fa-linkedin" aria-hidden="true"></i> LinkedIn
-                    </a>
                 </div>
             </div>
         </section>

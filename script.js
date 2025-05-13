@@ -69,4 +69,49 @@ window.addEventListener('scroll', () => {
             link.classList.add('active');
         }
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Hamburger menu functionality
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    const menuLinks = document.querySelectorAll('.nav-menu a');
+
+    function toggleMenu() {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !isExpanded);
+        navMenu.classList.toggle('active');
+        
+        // Prevent body scroll when menu is open
+        document.body.style.overflow = !isExpanded ? 'hidden' : '';
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInside = navMenu.contains(event.target) || menuToggle.contains(event.target);
+        if (!isClickInside && navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    // Close menu when clicking a link
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navMenu.classList.contains('active')) {
+                toggleMenu();
+            }
+        });
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && navMenu.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    // Update current year in footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
 }); 

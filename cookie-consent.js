@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function() {
             font-weight: 500;
         }
         .accept-cookies {
-            background: var(--secondary-color);
+            background: transparent;
+            border: 1px solid white !important;
             color: white;
         }
         .decline-cookies {

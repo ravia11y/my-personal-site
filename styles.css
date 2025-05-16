@@ -637,8 +637,23 @@ footer {
     background-color: var(--primary-color);
     color: white;
     padding: 2rem 0;
-    text-align: center;
-    border-top: 1px solid var(--border-color);
+    margin-top: 4rem;
+    position: relative;
+    width: 100%;
+}
+
+footer::after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+@media (max-width: 768px) {
+    footer {
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+    }
 }
 
 /* Certifications Section */
@@ -1143,39 +1158,57 @@ footer {
 }
 
 /* Cookie Banner */
-.cookie-banner {
+.cookie-consent {
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: var(--primary-color);
+    background: var(--primary-color);
     color: white;
     padding: 1rem;
-    text-align: center;
     z-index: 1000;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: none;
 }
 
-.cookie-banner p {
-    margin: 0 0 1rem 0;
-    font-size: 1rem;
-    line-height: 1.5;
+.cookie-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }
 
-.cookie-banner button {
-    background-color: white;
-    color: var(--primary-color);
-    border: none;
+.cookie-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.cookie-consent button {
     padding: 0.5rem 1rem;
+    border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    font-weight: 500;
 }
 
-.cookie-banner button:hover {
-    background-color: var(--secondary-color);
-    transform: translateY(-2px);
+.accept-cookies {
+    background: transparent;
+    border: 1px solid white !important;
+    color: white;
+}
+
+.decline-cookies {
+    background: transparent;
+    border: 1px solid white !important;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .cookie-content {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 /* Section Spacing */
